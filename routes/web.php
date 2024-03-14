@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $title = 'Homepage';
     $paragraph = 'Prova';
-    return view('home', compact('title', 'paragraph'));
+
+    $studenti = config('studenti');
+
+    return view('subfolder.home', compact('title', 'paragraph', 'studenti' ));
 });
